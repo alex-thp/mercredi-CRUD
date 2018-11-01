@@ -5,10 +5,12 @@ class StaticPagesController < ApplicationController
   end
 
   def new
+    
   end
 
   def create
     gossip = Gossip.new
+    gossip.user_id = $u
     gossip.anonymous = params["anonymous"]
     gossip.title = params["title"]
     gossip.content = params["content"]
