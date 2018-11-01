@@ -13,7 +13,13 @@ class StaticPagesController < ApplicationController
     gossip.anonymous = params["anonymous"]
     gossip.title = params["title"]
     gossip.content = params["content"]
-    gossip.save  
+    gossip.save
+    u = gossip.id
+    redirect_to "/static_pages/show/#{u}"
+  end
+
+  def potin
+    @id =params["id"]
   end
   #helper_method :create
 end
