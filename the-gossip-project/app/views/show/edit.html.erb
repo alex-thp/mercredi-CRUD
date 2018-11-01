@@ -1,0 +1,17 @@
+<form method="update">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="form-group">
+    <label for="anonymous">Pseudo :</label>
+    <input type="string" name="anonymous" class="form-control" aria-describedby="Pseudo" placeholder="Ton pseudo ici...">
+    <small id="emailHelp" class="form-text text-muted">Ton nom de compte ne sera pas dévoilé.</small>
+  </div>
+   <div class="form-group">
+    <label for="Content">Potin</label>
+    <textarea type="text-area" name="content" class="form-control" placeholder="Ton potin..." rows="5"></textarea>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label" for="exampleCheck1">J'ai bien compris que ce potin sera publique.</label>
+  </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
