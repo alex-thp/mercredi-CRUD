@@ -15,4 +15,7 @@
  </div>
 </div>
 <%= link_to "Editer le gossip", controller: "show", action: "edit" %>
+<% if (u.user_id == $u) %>
 <%= link_to 'Clique pour détruire', "#{u}", method: :delete %>
+<% end %>
+<%= link_to 'liste des potins', "/show", method: :get %>
