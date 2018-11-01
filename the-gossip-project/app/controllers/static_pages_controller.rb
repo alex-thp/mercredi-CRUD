@@ -4,5 +4,16 @@ class StaticPagesController < ApplicationController
     "hello"
   end
 
-  helper_method :home
+  def new
+
+  end
+
+  def create
+    gossip = Gossip.new
+    gossip.anonymous = params["anonymous"]
+    gossip.title = params["title"]
+    gossip.content = params["content"]
+    gossip.save  
+  end
+  #helper_method :create
 end
