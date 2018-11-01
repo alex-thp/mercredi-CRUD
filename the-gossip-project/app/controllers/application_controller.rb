@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-def vroom
+    def vroom
        @user = User.find_by("name = ?", params["name"])
        if @user.present? && (@user.password == params["password"])
             $u = @user.id
