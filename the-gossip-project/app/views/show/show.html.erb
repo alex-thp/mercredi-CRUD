@@ -1,0 +1,16 @@
+<%u = Gossip.find("#{@id}")%>
+<% i = u.title%>
+<% j = u.content%>
+<% k = u.anonymous%>
+
+<div class="card">
+ <div class="card-header">
+   <h4><em><b>Potin de <%="#{k}"%> :</b></em></h4>
+ </div>
+ <div class="card-body">
+   <blockquote class="blockquote mb-0">
+     <p><%= "#{j}"%></p>
+     <footer class="blockquote-footer"><%="#{i}"%></footer>
+   </blockquote>
+ </div>
+</div>
