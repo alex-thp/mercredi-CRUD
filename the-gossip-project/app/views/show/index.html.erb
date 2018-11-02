@@ -1,9 +1,12 @@
 <% @gossip.each do |i| %>
+<% g_id = i.id %>
   Auteur : <%= i.anonymous %>
   <br/>
   Titre : <%= i.title %>
   <br/>
   Contenu : <%= i.content %>
+  <%= link_to "Like", "/like/#{g_id}", method: :patch %>
+  <%= link_to 'Clique pour ne plus aimer', "/like/#{g_id}", method: :delete %>
   <br/>
   <br/>
 <% end %>

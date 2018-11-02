@@ -11,6 +11,10 @@ class ShowController < ApplicationController
   	gossip.content = params["content"]
   	gossip.save
   end
+  
+  def create
+  end
+
   def update
   end
 
